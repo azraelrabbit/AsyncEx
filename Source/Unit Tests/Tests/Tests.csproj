@@ -116,10 +116,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Enlightenment\Nito.AsyncEx.Enlightenment %28NET45%29\Nito.AsyncEx.Enlightenment %28NET45%29.csproj">
-      <Project>{294fd908-e6a7-4eb0-9231-dacfeb1ad224}</Project>
-      <Name>Nito.AsyncEx.Enlightenment %28NET45%29</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Nito.AsyncEx %28NET45, Win8, WP8, WPA81%29\Nito.AsyncEx %28NET45, Win8, WP8, WPA81%29.csproj">
       <Project>{fcf85b9c-f6b3-4afe-83d0-83c2caa76d24}</Project>
       <Name>Nito.AsyncEx %28NET45, Win8, WP8, WPA81%29</Name>

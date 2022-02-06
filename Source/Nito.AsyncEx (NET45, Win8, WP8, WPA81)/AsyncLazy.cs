@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Nito.AsyncEx.Internal;
 using System.Diagnostics;
 using Nito.AsyncEx.Internal.PlatformEnlightenment;
+using Microsoft.Runtime.CompilerServices;
 #if NONATIVETASKS
 using Microsoft.Runtime.CompilerServices;
 #else

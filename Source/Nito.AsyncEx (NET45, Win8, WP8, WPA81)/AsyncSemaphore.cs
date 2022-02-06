@@ -103,6 +103,22 @@ namespace Nito.AsyncEx
             return ret;
         }
 
+        
+        /// <summary>
+        /// Checks the dispose status by checking the lock object, if it is null means that object
+        /// has been disposed and throw ObjectDisposedException
+        /// </summary>
+        private void CheckDispose()
+        {
+            if (_mutex == null)
+            {
+                throw new ObjectDisposedException(null, "SemaphoreSlim_Disposed");
+            }
+        }
+
+
+       
+
         /// <summary>
         /// Synchronously waits for a slot in the semaphore to be available. This method may block the calling thread.
         /// </summary>
