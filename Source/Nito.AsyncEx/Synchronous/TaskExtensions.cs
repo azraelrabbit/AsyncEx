@@ -106,5 +106,17 @@ namespace Nito.AsyncEx.Synchronous
                 cancellationToken.ThrowIfCancellationRequested();
             }
         }
+
+
+        public static async Task<bool> WaitAsync(this AsyncManualResetEvent waitHandle, int timeoutMs)
+        {
+            if (waitHandle == null)
+                throw new ArgumentNullException("waitHandle");
+
+            Task waitTask = waitHandle.WaitAsync();
+            Task completedTask = await TaskEx.WhenAny(TaskEx.Delay(timeoutMs), waitHandle.WaitAsync());
+
+            return completedTask == waitTask;
+        }
     }
 }
